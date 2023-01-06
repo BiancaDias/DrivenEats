@@ -145,10 +145,10 @@ button{
     font-size: 20px;
     line-height: 23px;
     padding-left: 80px;
-    padding-right: 80px;
+    padding-right: 80px; 
 }
 
-.fecharPedido{
+.liberarPedido{
     background-color: #32B72F;
 }
 
