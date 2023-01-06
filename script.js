@@ -64,6 +64,7 @@ function fecharPedido(){
     if(botaoClicadoAnteriormenteP!==null && botaoClicadoAnteriormenteB!==null && botaoClicadoAnteriormenteS!==null)
     {
         const botao = document.querySelector('button');
+        botao.disabled = false;
         botao.classList.add('liberarPedido');
         botao.innerHTML= "Fechar pedido";
     }
