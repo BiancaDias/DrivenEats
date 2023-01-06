@@ -23,34 +23,37 @@
             <div class="prato-principal">
                 <h1>Primeiro, seu prato</h1>
                 <div class="container">
-                    <div onclick="selecionaPrato('.hamburguer')" class="selecao hamburguer"> <!--sera usada em todos os itens do cardapio-->
+                    <div data-test="dish" onclick="selecionaPrato('.hamburguer')" class="selecao hamburguer"> <!--sera usada em todos os itens do cardapio-->
                         <div class="prato">
                             <img src="imagens/hamburguer.jpg">
-                            <h2>Hamburguer</h2>
+                            <h2 data-test="item-name">Hamburguer</h2>
                             <p class="descricao">Dois bifes Num pão com gergelim</p>
-                            <div class="preco">
-                                <p>R$</p>
-                                <p class="valor">24,90</p>
+                            <div class="promocao">
+                                <div data-test="item-price" class="preco">
+                                    <p>R$</p>
+                                    <p class="valor">24,90</p>
+                                </div>
+                                <ion-icon name="checkmark-circle"></ion-icon>
                             </div>
                         </div><!--fim da div prato-->
                     </div><!--fimd a div selecao-->
-                    <div onclick="selecionaPrato('.hotdog')" class="selecao hotdog"> <!--sera usada em todos os itens do cardapio-->
+                    <div data-test="dish" onclick="selecionaPrato('.hotdog')" class="selecao hotdog"> <!--sera usada em todos os itens do cardapio-->
                         <div class="prato">
                             <img src="imagens/hotdog.png">
-                            <h2>Cachorro Quente</h2>
+                            <h2 data-test="item-name">Cachorro Quente</h2>
                             <p class="descricao">Um pouco de batata, um pouco de bacon</p>
-                            <div class="preco">
+                            <div data-test="item-price" class="preco">
                                 <p>R$</p>
                                 <p class="valor">14,90</p>
                             </div>
                         </div><!--fim da div prato-->
                     </div><!--fimd a div selecao-->
-                    <div onclick="selecionaPrato('.pizza')" class="selecao pizza"> <!--sera usada em todos os itens do cardapio-->
+                    <div data-test="dish" onclick="selecionaPrato('.pizza')" class="selecao pizza"> <!--sera usada em todos os itens do cardapio-->
                         <div class="prato">
                             <img src="imagens/pizza.jpeg">
-                            <h2>Pizza Marguerita</h2>
+                            <h2 data-test="item-name">Pizza Marguerita</h2>
                             <p class="descricao">Massa assada em forno a lenha</p>
-                            <div class="preco">
+                            <div data-test="item-price" class="preco">
                                 <p>R$</p>
                                 <p class="valor">39,90</p>
                             </div>
@@ -61,34 +64,34 @@
             <div class="bebida">
                 <h1>Agora, sua bebida</h1>
                 <div class="container">
-                    <div onclick="selecionaBebida('.coca')" class="selecao coca"> <!--sera usada em todos os itens do cardapio-->
+                    <div data-test="drink" onclick="selecionaBebida('.coca')" class="selecao coca"> <!--sera usada em todos os itens do cardapio-->
                         <div class="prato">
                             <img src="imagens/coca-cola.png">
-                            <h2>Coquinha Gelada</h2>
+                            <h2 data-test="item-name">Coquinha Gelada</h2>
                             <p class="descricao">A tradicional no tamanho de 2L</p>
-                            <div class="preco">
+                            <div data-test="item-price" class="preco">
                                 <p>R$</p>
                                 <p class="valor">10,50</p>
                             </div>
                         </div><!--fim da div prato-->
                     </div><!--fimd a div selecao-->
-                    <div onclick="selecionaBebida('.suco')" class="selecao suco"> <!--sera usada em todos os itens do cardapio-->
+                    <div data-test="drink" onclick="selecionaBebida('.suco')" class="selecao suco"> <!--sera usada em todos os itens do cardapio-->
                         <div class="prato">
                             <img src="imagens/suco.jpg">
-                            <h2>Suco de Laranja</h2>
+                            <h2 data-test="item-name">Suco de Laranja</h2>
                             <p class="descricao">Jarra de 1 litro sem açucar</p>
-                            <div class="preco">
+                            <div data-test="item-price" class="preco">
                                 <p>R$</p>
                                 <p class="valor">11,99</p>
                             </div>
                         </div><!--fim da div prato-->
                     </div><!--fimd a div selecao-->
-                    <div onclick="selecionaBebida('.cha')" class="selecao cha"> <!--sera usada em todos os itens do cardapio-->
+                    <div data-test="drink" onclick="selecionaBebida('.cha')" class="selecao cha"> <!--sera usada em todos os itens do cardapio-->
                         <div class="prato">
                             <img src="imagens/cha.jpg">
-                            <h2>Chá Gelado</h2>
+                            <h2 data-test="item-name">Chá Gelado</h2>
                             <p class="descricao">Cházinho para dizer que é fitness</p>
-                            <div class="preco">
+                            <div data-test="item-price" class="preco">
                                 <p>R$</p>
                                 <p class="valor">10,90</p>
                             </div>
@@ -99,34 +102,34 @@
             <div class="sobremesa">
                 <h1>Por fim, sua sobremesa</h1>
                 <div class="container">
-                    <div onclick="selecionaSobremesa('.brownie')" class="selecao brownie"> <!--sera usada em todos os itens do cardapio-->
+                    <div data-test="dessert" onclick="selecionaSobremesa('.brownie')" class="selecao brownie"> <!--sera usada em todos os itens do cardapio-->
                         <div class="prato">
                             <img src="imagens/brownie.jpg">
-                            <h2>Brownie Recheado</h2>
+                            <h2 data-test="item-name">Brownie Recheado</h2>
                             <p class="descricao">Casquinha crocante com morangos</p>
-                            <div class="preco">
+                            <div data-test="item-price" class="preco">
                                 <p>R$</p>
                                 <p class="valor">15,50</p>
                             </div>
                         </div><!--fim da div prato-->
                     </div><!--fimd a div selecao-->
-                    <div onclick="selecionaSobremesa('.bolo')" class="selecao bolo"> <!--sera usada em todos os itens do cardapio-->
+                    <div data-test="dessert" onclick="selecionaSobremesa('.bolo')" class="selecao bolo"> <!--sera usada em todos os itens do cardapio-->
                         <div class="prato">
                             <img src="imagens/bolo.jpg">
-                            <h2>Bolo de Pote</h2>
+                            <h2 data-test="item-name">Bolo de Pote</h2>
                             <p class="descricao">Muuuito chocolate com morangos</p>
-                            <div class="preco">
+                            <div data-test="item-price" class="preco">
                                 <p>R$</p>
                                 <p class="valor">17,90</p>
                             </div>
                         </div><!--fim da div prato-->
                     </div><!--fimd a div selecao-->
-                    <div onclick="selecionaSobremesa('.sorvete')" class="selecao sorvete"> <!--sera usada em todos os itens do cardapio-->
+                    <div data-test="dessert" onclick="selecionaSobremesa('.sorvete')" class="selecao sorvete"> <!--sera usada em todos os itens do cardapio-->
                         <div class="prato">
                             <img src="imagens/sorvete.jpg">
-                            <h2>Sorvete Napolitano</h2>
+                            <h2 data-test="item-name">Sorvete Napolitano</h2>
                             <p class="descricao">Grandes chances de chegar derretido</p>
-                            <div class="preco">
+                            <div data-test="item-price" class="preco">
                                 <p>R$</p>
                                 <p class="valor">10,90</p>
                             </div>
@@ -137,11 +140,11 @@
         </main>
         <footer>
             <div class="rodape">
-                <button onclick="fecharPedidoDefinitivo(this)">Selecione os 3 itens para fechar o pedido</button>
+                <button data-test="order-btn" onclick="fecharPedidoDefinitivo(this)">Selecione os 3 itens para fechar o pedido</button>
             </div>
         </footer>
     </div>
-    <!--<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>-->
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
