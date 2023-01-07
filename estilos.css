@@ -167,10 +167,11 @@ button{
 }
 
 ion-icon{
-    color:#FFFFFF;
+    color:#32B72F;
     width: 19px;
+    height: 19px;
 }
 
-.inicializaIcone{
-    color:#32B72F;
+.escondido{
+    display: none;
 }

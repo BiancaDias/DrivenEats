@@ -1,12 +1,18 @@
 function selecionaPrato(botaoClicado){
     const botaoClicadoAnteriormenteP = document.querySelector('.selecionadoComida');
+    const checkAnterior = document.querySelector('.selecionadoComida ion-icon');
 
     if(botaoClicadoAnteriormenteP!==null){
+  
         botaoClicadoAnteriormenteP.classList.remove('selecionadoComida');
+        checkAnterior.classList.add('escondido');
     }
     
     const elemento = document.querySelector(botaoClicado);
     elemento.classList.add('selecionadoComida');
+    const check = document.querySelector('.selecionadoComida .escondido');
+    check.classList.remove('escondido');
+    
 
     const botaoClicadoAnteriormenteB = document.querySelector('.selecionadoBebida');
     const botaoClicadoAnteriormenteS = document.querySelector('.selecionadoSobremesa');
@@ -19,13 +25,17 @@ function selecionaPrato(botaoClicado){
 
 function selecionaBebida(botaoClicado){
     const botaoClicadoAnteriormenteB = document.querySelector('.selecionadoBebida');
+    const checkAnterior = document.querySelector('.selecionadoBebida ion-icon');
 
     if(botaoClicadoAnteriormenteB!==null){
         botaoClicadoAnteriormenteB.classList.remove('selecionadoBebida');
+        checkAnterior.classList.add('escondido');
     }
 
     const elemento = document.querySelector(botaoClicado);
     elemento.classList.add('selecionadoBebida');
+    const check = document.querySelector('.selecionadoBebida .escondido');
+    check.classList.remove('escondido');
 
     const botaoClicadoAnteriormenteS = document.querySelector('.selecionadoSobremesa');
     const botaoClicadoAnteriormenteP = document.querySelector('.selecionadoComida');
@@ -39,14 +49,17 @@ function selecionaBebida(botaoClicado){
 
 function selecionaSobremesa(botaoClicado){
     const botaoClicadoAnteriormenteS = document.querySelector('.selecionadoSobremesa');
-    
+    const checkAnterior = document.querySelector('.selecionadoSobremesa ion-icon');
 
     if(botaoClicadoAnteriormenteS!==null){
         botaoClicadoAnteriormenteS.classList.remove('selecionadoSobremesa');
+        checkAnterior.classList.add('escondido');
     }
 
     const elemento = document.querySelector(botaoClicado);
     elemento.classList.add('selecionadoSobremesa');
+    const check = document.querySelector('.selecionadoSobremesa .escondido');
+    check.classList.remove('escondido');
 
     const botaoClicadoAnteriormenteB = document.querySelector('.selecionadoBebida');
     const botaoClicadoAnteriormenteP = document.querySelector('.selecionadoComida');
@@ -86,7 +99,7 @@ function fecharPedidoDefinitivo(botao){
         const total = Number(valorPrato.innerHTML.replace(",", ".")) + Number(valorBebida.innerHTML.replace(",", ".")) + Number(valorSobremesa.innerHTML.replace(",", "."));
         
 
-        let numero = "5531971144866";
+        let numero = "5531999999999";
         let texto = "Olá, gostaria de fazer o pedido:\n- Prato: " + prato.innerHTML + "\n- Bebida: " + bebida.innerHTML + "\n- Sobremesa: " + sobremesa.innerHTML + "\nTotal: R$ " + total.toFixed(2);;
         texto = window.encodeURIComponent(texto);
         window.open("https://api.whatsapp.com/send?phone=" + numero + "&text=" + texto, "_blank");
