@@ -64,7 +64,7 @@ function fecharPedido(){
     if(botaoClicadoAnteriormenteP!==null && botaoClicadoAnteriormenteB!==null && botaoClicadoAnteriormenteS!==null)
     {
         const botao = document.querySelector('button');
-        botao.disabled = false;
+        botao.disabled = false; //habilita o botão
         botao.classList.add('liberarPedido');
         botao.innerHTML= "Fechar pedido";
     }
@@ -76,7 +76,20 @@ function fecharPedidoDefinitivo(botao){
     const botaoClicadoAnteriormenteS = document.querySelector('.selecionadoSobremesa');
     if(botaoClicadoAnteriormenteP!==null && botaoClicadoAnteriormenteB!==null && botaoClicadoAnteriormenteS!==null)
     {
-        alert("Bora fechar");
+        const prato = document.querySelector('.selecionadoComida h2');
+        const bebida = document.querySelector('.selecionadoBebida h2');
+        const sobremesa = document.querySelector('.selecionadoSobremesa h2');
+        const valorPrato = document.querySelector('.selecionadoComida .valor');
+        const valorBebida = document.querySelector('.selecionadoBebida .valor');
+        const valorSobremesa = document.querySelector('.selecionadoSobremesa .valor');
+
+        const total = Number(valorPrato.innerHTML.replace(",", ".")) + Number(valorBebida.innerHTML.replace(",", ".")) + Number(valorSobremesa.innerHTML.replace(",", "."));
+        
+
+        let numero = "5531971144866";
+        let texto = "Olá, gostaria de fazer o pedido:\n- Prato: " + prato.innerHTML + "\n- Bebida: " + bebida.innerHTML + "\n- Sobremesa: " + sobremesa.innerHTML + "\nTotal: " + total.toFixed(2);;
+        texto = window.encodeURIComponent(texto);
+        window.open("https://api.whatsapp.com/send?phone=" + numero + "&text=" + texto, "_blank");
         
     }
 }

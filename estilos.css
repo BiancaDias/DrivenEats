@@ -158,4 +158,19 @@ button{
 
 .selecionadoComida, .selecionadoBebida, .selecionadoSobremesa{
     border: 5px solid #32B72F;
+    color:#32B72F;
+}
+
+.promocao{
+    display: flex;
+    justify-content: space-between;
+}
+
+ion-icon{
+    color:#FFFFFF;
+    width: 19px;
+}
+
+.inicializaIcone{
+    color:#32B72F;
 }
