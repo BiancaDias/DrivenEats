@@ -87,7 +87,7 @@ function fecharPedidoDefinitivo(botao){
         
 
         let numero = "5531971144866";
-        let texto = "Olá, gostaria de fazer o pedido:\n- Prato: " + prato.innerHTML + "\n- Bebida: " + bebida.innerHTML + "\n- Sobremesa: " + sobremesa.innerHTML + "\nTotal: " + total.toFixed(2);;
+        let texto = "Olá, gostaria de fazer o pedido:\n- Prato: " + prato.innerHTML + "\n- Bebida: " + bebida.innerHTML + "\n- Sobremesa: " + sobremesa.innerHTML + "\nTotal: R$ " + total.toFixed(2);;
         texto = window.encodeURIComponent(texto);
         window.open("https://api.whatsapp.com/send?phone=" + numero + "&text=" + texto, "_blank");
         
