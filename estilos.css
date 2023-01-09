@@ -1,63 +1,64 @@
-*{
+* {
     box-sizing: border-box;
-}
-body{
-    font-family: 'Roboto', sans-serif;
+  }
+  body {
+    font-family: "Roboto", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-}
-.principal{
-    
+    position: relative;
+  }
+  .principal {
     background-color: #eeeeee;
     width: 414px;
-}
-header{
-    background-color: #CF2B2B;
-    width: 414px; 
+  }
+  header {
+    background-color: #cf2b2b;
+    width: 414px;
     height: 92px;
-    color: #FFFFFF;
+    color: #ffffff;
     position: fixed;
-    -webkit-filter: drop-shadow(10px 0px 20px rgba(0 0 0 / 0)); 
-    filter: drop-shadow(0px 5px 2px rgba( 169, 169, 169, 0.5 ));
+    -webkit-filter: drop-shadow(10px 0px 20px rgba(0 0 0 / 0));
+    filter: drop-shadow(0px 5px 2px rgba(169, 169, 169, 0.5));
     display: flex;
     flex-direction: column;
     justify-content: center;
     z-index: 1;
-}
-header h1{
-    font-family: 'Righteous', cursive;
+  }
+  header h1 {
+    font-family: "Righteous", cursive;
     font-size: 44px;
-}
-
-header p{
+  }
+  
+  header p {
     font-weight: 400;
     font-size: 17px;
     margin-top: 5px;
     margin-bottom: 18px;
-}
-
-header div{
+  }
+  
+  header div {
     margin-left: 21px;
     margin-top: 18px;
-}
-main{
+  }
+  main {
     margin-top: 123px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-}
-main h2{
-    font-family: 'Righteous', cursive;
+  }
+  main h2 {
+    font-family: "Righteous", cursive;
     font-weight: 400;
     font-size: 26px;
     line-height: 32px;
     color: #333333;
     margin-left: 19px;
-}
-
-.container{ /*deixar na horizontal as seleções*/
+  }
+  
+  .container {
+    /*deixar na horizontal as seleções*/
     display: flex;
     background-color: #eeeeee;
     overflow-x: scroll;
@@ -67,9 +68,9 @@ main h2{
     padding-left: 19px;
     height: 230px;
     align-items: center;
-}
-
-.preco{
+  }
+  
+  .preco {
     display: flex;
     justify-content: space-between;
     width: 65px;
@@ -77,105 +78,163 @@ main h2{
     font-size: 16px;
     line-height: 19px;
     color: #000000;
-}
-.prato{
+  }
+  .prato {
     width: 144px;
     height: 187px;
     margin-top: 18px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 13px;
-    
-}
-
-img{
+  }
+  
+  img {
     width: 144px;
     height: 87px;
     border-radius: 4px;
-}
-
-.selecao{
+  }
+  
+  .selecao {
     min-width: 172px;
     height: 216px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     border-radius: 9px;
     margin-right: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 1px 1px 5px lightgray;
-}
-
-h3{
+  }
+  
+  h3 {
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
     color: #333333;
-}
-
-.descricao{
+  }
+  
+  .descricao {
     font-weight: 300;
     font-size: 15px;
     line-height: 18px;
-    color: #A6A6A6;
-}
-
-.bebida h2, .sobremesa h2{
+    color: #a6a6a6;
+  }
+  
+  .bebida h2,
+  .sobremesa h2 {
     margin-top: 27px;
-}
-
-.rodape{
+  }
+  
+  .rodape {
     width: 414px;
     height: 92px;
-    background-color: #FFFFFF;;
+    background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 16px;
     position: fixed;
     bottom: 0;
-}
-
-button{
-    background: #CBCBCB;
+  }
+  
+  button {
+    background: #cbcbcb;
     border-radius: 50px;
     width: 364px;
     height: 61px;
     border: none;
-    color: #FFFFFF;
+    color: #ffffff;
     font-weight: 400;
     font-size: 20px;
     line-height: 23px;
     padding-left: 80px;
-    padding-right: 80px; 
-}
-
-.liberarPedido{
-    background-color: #32B72F;
-}
-
-.sobremesa .container{
+    padding-right: 80px;
+  }
+  
+  .liberarPedido {
+    background-color: #32b72f;
+  }
+  
+  .sobremesa .container {
     margin-bottom: 108px;
-}
-
-.selecionadoComida, .selecionadoBebida, .selecionadoSobremesa{
-    border: 5px solid #32B72F;
-    color:#32B72F;
-}
-
-.promocao{
+  }
+  
+  .selecionadoComida,
+  .selecionadoBebida,
+  .selecionadoSobremesa {
+    border: 5px solid #32b72f;
+  }
+  
+  .promocao,
+  .prato-pedido,
+  .bebida-pedida,
+  .sobremesa-pedida,
+  .total {
     display: flex;
     justify-content: space-between;
-}
-
-ion-icon{
-    color:#32B72F;
+  }
+  
+  ion-icon {
+    color: #32b72f;
     width: 19px;
     height: 19px;
-}
-
-.escondido{
+  }
+  .opacidade {
+    opacity: 10%;
+    z-index: 2;
+  }
+  .confirme-pedido {
+    position: fixed;
+    top: 30%; 
+    background-color: #50d074;
+    width: 377px;
+    height: 353px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    padding-top: 21px;
+    font-size: 22px;
+    color: #ffffff;
+  }
+  
+  .revisao {
+    min-width: 326px;
+    height: 147px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .total,
+  h4 {
+    font-weight: 700;
+  }
+  
+  .certo {
+    border-radius: 100px;
+    background-color: #ffffff;
+    color: #50d074;
+    font-weight: 700;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 24px;
+    width: 333px;
+    height: 52px;
+  }
+  .cancela {
+    background-color: #50d074;
+    font-weight: 700;
+    font-size: 20px;
+  }
+  
+  .escondido {
     display: none;
-}
+  }
+  
+

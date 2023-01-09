@@ -64,6 +64,41 @@ function fecharPedido(){
         return true;
     }
 }
+
+let nome;
+let endereco;
+function fecharPedidoJanela(botao){
+    const janela = document.querySelector('.confirme-pedido');
+    janela.classList.remove('escondido');
+    const corpo = document.querySelector('.principal')
+    corpo.classList.add('opacidade');
+
+    nome = prompt("Como você deseja ser chamado?");
+    endereco = prompt("Digite seu endereço");
+
+    const comida = document.querySelector('.comida')
+    comida.innerHTML = document.querySelector('.selecionadoComida h3').innerHTML;
+    const bebida = document.querySelector('.bebida-selecionada');
+    bebida.innerHTML = document.querySelector('.selecionadoBebida h3').innerHTML;
+    const sobremesa = document.querySelector('.sobremesa-selecionada');
+    sobremesa.innerHTML = document.querySelector('.selecionadoSobremesa h3').innerHTML;
+    
+    const valorPrato = document.querySelector('.selecionadoComida .valor');
+    const valorBebida = document.querySelector('.selecionadoBebida .valor');
+    const valorSobremesa = document.querySelector('.selecionadoSobremesa .valor');
+
+    document.querySelector('.valor-comida').innerHTML = "RS " + valorPrato.innerHTML;
+    document.querySelector('.valor-bebida').innerHTML = "R$ " + valorBebida.innerHTML;
+    document.querySelector('.valor-sobremesa').innerHTML = "R$ " + valorSobremesa.innerHTML;
+
+    let total = (Number(valorPrato.innerHTML.replace(",", ".")) + Number(valorBebida.innerHTML.replace(",", ".")) + Number(valorSobremesa.innerHTML.replace(",", "."))).toFixed(2);
+    total = total.toString();
+    total = total.replace(".",",")
+    document.querySelector('.valor-total').innerHTML = "R$ " + total;
+
+
+}
+
 //funcao a ser usada para fechar o pedido e chamar o wpp
 function fecharPedidoDefinitivo(botao){
 
@@ -79,10 +114,17 @@ function fecharPedidoDefinitivo(botao){
         const total = Number(valorPrato.innerHTML.replace(",", ".")) + Number(valorBebida.innerHTML.replace(",", ".")) + Number(valorSobremesa.innerHTML.replace(",", "."));
         
 
-        let numero = "5531999999999";
-        let texto = "Olá, gostaria de fazer o pedido:\n- Prato: " + prato.innerHTML + "\n- Bebida: " + bebida.innerHTML + "\n- Sobremesa: " + sobremesa.innerHTML + "\nTotal: R$ " + total.toFixed(2);;
+        let numero = "5531971144866";
+        let texto = "Olá, gostaria de fazer o pedido:\n- Prato: " + prato.innerHTML + "\n- Bebida: " + bebida.innerHTML + "\n- Sobremesa: " + sobremesa.innerHTML + "\nTotal: R$ " + total.toFixed(2) + "\n\nNome: " + nome + "\nEndereço: " + endereco;
         texto = window.encodeURIComponent(texto);
         window.open("https://api.whatsapp.com/send?phone=" + numero + "&text=" + texto, "_blank");
         
     }
+}
+
+function cancelarPedido(){
+    const janela = document.querySelector('.confirme-pedido');
+    janela.classList.add('escondido');
+    const corpo = document.querySelector('.principal')
+    corpo.classList.remove('opacidade');
 }

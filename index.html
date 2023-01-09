@@ -1,174 +1,304 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Bianca Dias">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Bianca Dias" />
     <title>DrivenEats</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="estilos.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="principal">
-        <header>
-            <div>
-                <h1>DrivenEats</h1>
-                <p>Sua comida em 6 minutos</p>
+      <header>
+        <div>
+          <h1>DrivenEats</h1>
+          <p>Sua comida em 6 minutos</p>
+        </div>
+      </header>
+      <main>
+        <div class="prato-principal">
+          <h2>Primeiro, seu prato</h2>
+          <div class="container">
+            <div
+              data-test="dish"
+              onclick="selecionaPrato('.hamburguer')"
+              class="selecao hamburguer"
+            >
+              <!--sera usada em todos os itens do cardapio-->
+              <div class="prato">
+                <img src="imagens/hamburguer.jpg" />
+                <h3 data-test="item-name">Hamburguer</h3>
+                <p class="descricao">Dois bifes Num pão com gergelim</p>
+                <div class="promocao">
+                  <div data-test="item-price" class="preco">
+                    <p>R$</p>
+                    <p class="valor">24,90</p>
+                  </div>
+                  <ion-icon
+                    class="escondido"
+                    name="checkmark-circle"
+                  ></ion-icon>
+                </div>
+              </div>
+              <!--fim da div prato-->
             </div>
-        </header>
-        <main>
-            <div class="prato-principal">
-                <h2>Primeiro, seu prato</h2>
-                <div class="container">
-                    <div data-test="dish" onclick="selecionaPrato('.hamburguer')" class="selecao hamburguer"> <!--sera usada em todos os itens do cardapio-->
-                        <div class="prato">
-                            <img src="imagens/hamburguer.jpg">
-                            <h3 data-test="item-name">Hamburguer</h3>
-                            <p class="descricao">Dois bifes Num pão com gergelim</p>
-                            <div class="promocao">
-                                <div data-test="item-price" class="preco">
-                                    <p>R$</p>
-                                    <p class="valor">24,90</p>
-                                </div>
-                                <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
-                            </div>
-                        </div><!--fim da div prato-->
-                    </div><!--fimd a div selecao-->
-                    <div data-test="dish" onclick="selecionaPrato('.hotdog')" class="selecao hotdog"> <!--sera usada em todos os itens do cardapio-->
-                        <div class="prato">
-                            <img src="imagens/hotdog.png">
-                            <h3 data-test="item-name">Cachorro Quente</h3>
-                            <p class="descricao">Um pouco de batata, um pouco de bacon</p>
-                            <div class="promocao">
-                                <div data-test="item-price" class="preco">
-                                    <p>R$</p>
-                                    <p class="valor">14,90</p>
-                                </div>
-                                <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
-                            </div>
-                        </div><!--fim da div prato-->
-                    </div><!--fimd a div selecao-->
-                    <div data-test="dish" onclick="selecionaPrato('.pizza')" class="selecao pizza"> <!--sera usada em todos os itens do cardapio-->
-                        <div class="prato">
-                            <img src="imagens/pizza.jpeg">
-                            <h3 data-test="item-name">Pizza Marguerita</h3>
-                            <p class="descricao">Massa assada em forno a lenha</p>
-                            <div class="promocao">
-                                <div data-test="item-price" class="preco">
-                                    <p>R$</p>
-                                    <p class="valor">39,90</p>
-                                </div>
-                                <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
-                            </div>
-                        </div><!--fim da div prato-->
-                    </div><!--fimd a div selecao-->
-                </div><!--fim da div container-->
+            <!--fimd a div selecao-->
+            <div
+              data-test="dish"
+              onclick="selecionaPrato('.hotdog')"
+              class="selecao hotdog"
+            >
+              <!--sera usada em todos os itens do cardapio-->
+              <div class="prato">
+                <img src="imagens/hotdog.png" />
+                <h3 data-test="item-name">Cachorro Quente</h3>
+                <p class="descricao">Um pouco de batata, um pouco de bacon</p>
+                <div class="promocao">
+                  <div data-test="item-price" class="preco">
+                    <p>R$</p>
+                    <p class="valor">14,90</p>
+                  </div>
+                  <ion-icon
+                    class="escondido"
+                    name="checkmark-circle"
+                  ></ion-icon>
+                </div>
+              </div>
+              <!--fim da div prato-->
             </div>
-            <div class="bebida">
-                <h2>Agora, sua bebida</h2>
-                <div class="container">
-                    <div data-test="drink" onclick="selecionaBebida('.coca')" class="selecao coca"> <!--sera usada em todos os itens do cardapio-->
-                        <div class="prato">
-                            <img src="imagens/coca-cola.png">
-                            <h3 data-test="item-name">Coquinha Gelada</h3>
-                            <p class="descricao">A tradicional no tamanho de 2L</p>
-                            <div class="promocao">
-                                <div data-test="item-price" class="preco">
-                                    <p>R$</p>
-                                    <p class="valor">10,50</p>
-                                </div>
-                                <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
-                            </div>
-                        </div><!--fim da div prato-->
-                    </div><!--fimd a div selecao-->
-                    <div data-test="drink" onclick="selecionaBebida('.suco')" class="selecao suco"> <!--sera usada em todos os itens do cardapio-->
-                        <div class="prato">
-                            <img src="imagens/suco.jpg">
-                            <h3 data-test="item-name">Suco de Laranja</h3>
-                            <p class="descricao">Jarra de 1 litro sem açucar</p>
-                            <div class="promocao">
-                                <div data-test="item-price" class="preco">
-                                    <p>R$</p>
-                                    <p class="valor">11,99</p>
-                                </div>
-                                <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
-                            </div>
-                        </div><!--fim da div prato-->
-                    </div><!--fimd a div selecao-->
-                    <div data-test="drink" onclick="selecionaBebida('.cha')" class="selecao cha"> <!--sera usada em todos os itens do cardapio-->
-                        <div class="prato">
-                            <img src="imagens/cha.jpg">
-                            <h3 data-test="item-name">Chá Gelado</h3>
-                            <p class="descricao">Cházinho para dizer que é fitness</p>
-                            <div class="promocao">
-                                <div data-test="item-price" class="preco">
-                                    <p>R$</p>
-                                    <p class="valor">10,90</p>
-                                </div>
-                                <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
-                            </div>
-                        </div><!--fim da div prato-->
-                    </div><!--fimd a div selecao-->
-                </div><!--fim da div container-->
+            <!--fimd a div selecao-->
+            <div
+              data-test="dish"
+              onclick="selecionaPrato('.pizza')"
+              class="selecao pizza"
+            >
+              <!--sera usada em todos os itens do cardapio-->
+              <div class="prato">
+                <img src="imagens/pizza.jpeg" />
+                <h3 data-test="item-name">Pizza Marguerita</h3>
+                <p class="descricao">Massa assada em forno a lenha</p>
+                <div class="promocao">
+                  <div data-test="item-price" class="preco">
+                    <p>R$</p>
+                    <p class="valor">39,90</p>
+                  </div>
+                  <ion-icon
+                    class="escondido"
+                    name="checkmark-circle"
+                  ></ion-icon>
+                </div>
+              </div>
+              <!--fim da div prato-->
             </div>
-            <div class="sobremesa">
-                <h2>Por fim, sua sobremesa</h2>
-                <div class="container">
-                    <div data-test="dessert" onclick="selecionaSobremesa('.brownie')" class="selecao brownie"> <!--sera usada em todos os itens do cardapio-->
-                        <div class="prato">
-                            <img src="imagens/brownie.jpg">
-                            <h3 data-test="item-name">Brownie Recheado</h3>
-                            <p class="descricao">Casquinha crocante com morangos</p>
-                            <div class="promocao">
-                                <div data-test="item-price" class="preco">
-                                    <p>R$</p>
-                                    <p class="valor">15,50</p>
-                                </div>
-                                <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
-                            </div>
-                        </div><!--fim da div prato-->
-                    </div><!--fimd a div selecao-->
-                    <div data-test="dessert" onclick="selecionaSobremesa('.bolo')" class="selecao bolo"> <!--sera usada em todos os itens do cardapio-->
-                        <div class="prato">
-                            <img src="imagens/bolo.jpg">
-                            <h3 data-test="item-name">Bolo de Pote</h3>
-                            <p class="descricao">Muuuito chocolate com morangos</p>
-                            <div class="promocao">
-                                <div data-test="item-price" class="preco">
-                                    <p>R$</p>
-                                    <p class="valor">17,90</p>
-                                </div>
-                                <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
-                            </div>
-                        </div><!--fim da div prato-->
-                    </div><!--fimd a div selecao-->
-                    <div data-test="dessert" onclick="selecionaSobremesa('.sorvete')" class="selecao sorvete"> <!--sera usada em todos os itens do cardapio-->
-                        <div class="prato">
-                            <img src="imagens/sorvete.jpg">
-                            <h3 data-test="item-name">Sorvete Napolitano</h3>
-                            <p class="descricao">Grandes chances de chegar derretido</p>
-                            <div class="promocao">
-                                <div data-test="item-price" class="preco">
-                                    <p>R$</p>
-                                    <p class="valor">12,39</p>
-                                </div>
-                                <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
-                            </div>
-                        </div><!--fim da div prato-->
-                    </div><!--fimd a div selecao-->
-                </div><!--fim da div container-->
+            <!--fimd a div selecao-->
+          </div>
+          <!--fim da div container-->
+        </div>
+        <div class="bebida">
+          <h2>Agora, sua bebida</h2>
+          <div class="container">
+            <div
+              data-test="drink"
+              onclick="selecionaBebida('.coca')"
+              class="selecao coca"
+            >
+              <!--sera usada em todos os itens do cardapio-->
+              <div class="prato">
+                <img src="imagens/coca-cola.png" />
+                <h3 data-test="item-name">Coquinha Gelada</h3>
+                <p class="descricao">A tradicional no tamanho de 2L</p>
+                <div class="promocao">
+                  <div data-test="item-price" class="preco">
+                    <p>R$</p>
+                    <p class="valor">10,50</p>
+                  </div>
+                  <ion-icon
+                    class="escondido"
+                    name="checkmark-circle"
+                  ></ion-icon>
+                </div>
+              </div>
+              <!--fim da div prato-->
             </div>
-        </main>
-        <footer>
-            <div class="rodape">
-                <button data-test="order-btn" onclick="fecharPedidoDefinitivo(this)" disabled>Selecione os 3 itens para fechar o pedido</button>
+            <!--fimd a div selecao-->
+            <div
+              data-test="drink"
+              onclick="selecionaBebida('.suco')"
+              class="selecao suco"
+            >
+              <!--sera usada em todos os itens do cardapio-->
+              <div class="prato">
+                <img src="imagens/suco.jpg" />
+                <h3 data-test="item-name">Suco de Laranja</h3>
+                <p class="descricao">Jarra de 1 litro sem açucar</p>
+                <div class="promocao">
+                  <div data-test="item-price" class="preco">
+                    <p>R$</p>
+                    <p class="valor">11,99</p>
+                  </div>
+                  <ion-icon
+                    class="escondido"
+                    name="checkmark-circle"
+                  ></ion-icon>
+                </div>
+              </div>
+              <!--fim da div prato-->
             </div>
-        </footer>
+            <!--fimd a div selecao-->
+            <div
+              data-test="drink"
+              onclick="selecionaBebida('.cha')"
+              class="selecao cha"
+            >
+              <!--sera usada em todos os itens do cardapio-->
+              <div class="prato">
+                <img src="imagens/cha.jpg" />
+                <h3 data-test="item-name">Chá Gelado</h3>
+                <p class="descricao">Cházinho para dizer que é fitness</p>
+                <div class="promocao">
+                  <div data-test="item-price" class="preco">
+                    <p>R$</p>
+                    <p class="valor">10,90</p>
+                  </div>
+                  <ion-icon
+                    class="escondido"
+                    name="checkmark-circle"
+                  ></ion-icon>
+                </div>
+              </div>
+              <!--fim da div prato-->
+            </div>
+            <!--fimd a div selecao-->
+          </div>
+          <!--fim da div container-->
+        </div>
+        <div class="sobremesa">
+          <h2>Por fim, sua sobremesa</h2>
+          <div class="container">
+            <div
+              data-test="dessert"
+              onclick="selecionaSobremesa('.brownie')"
+              class="selecao brownie"
+            >
+              <!--sera usada em todos os itens do cardapio-->
+              <div class="prato">
+                <img src="imagens/brownie.jpg" />
+                <h3 data-test="item-name">Brownie Recheado</h3>
+                <p class="descricao">Casquinha crocante com morangos</p>
+                <div class="promocao">
+                  <div data-test="item-price" class="preco">
+                    <p>R$</p>
+                    <p class="valor">15,50</p>
+                  </div>
+                  <ion-icon
+                    class="escondido"
+                    name="checkmark-circle"
+                  ></ion-icon>
+                </div>
+              </div>
+              <!--fim da div prato-->
+            </div>
+            <!--fimd a div selecao-->
+            <div
+              data-test="dessert"
+              onclick="selecionaSobremesa('.bolo')"
+              class="selecao bolo"
+            >
+              <!--sera usada em todos os itens do cardapio-->
+              <div class="prato">
+                <img src="imagens/bolo.jpg" />
+                <h3 data-test="item-name">Bolo de Pote</h3>
+                <p class="descricao">Muuuito chocolate com morangos</p>
+                <div class="promocao">
+                  <div data-test="item-price" class="preco">
+                    <p>R$</p>
+                    <p class="valor">17,90</p>
+                  </div>
+                  <ion-icon
+                    class="escondido"
+                    name="checkmark-circle"
+                  ></ion-icon>
+                </div>
+              </div>
+              <!--fim da div prato-->
+            </div>
+            <!--fimd a div selecao-->
+            <div
+              data-test="dessert"
+              onclick="selecionaSobremesa('.sorvete')"
+              class="selecao sorvete"
+            >
+              <!--sera usada em todos os itens do cardapio-->
+              <div class="prato">
+                <img src="imagens/sorvete.jpg" />
+                <h3 data-test="item-name">Sorvete Napolitano</h3>
+                <p class="descricao">Grandes chances de chegar derretido</p>
+                <div class="promocao">
+                  <div data-test="item-price" class="preco">
+                    <p>R$</p>
+                    <p class="valor">12,39</p>
+                  </div>
+                  <ion-icon
+                    class="escondido"
+                    name="checkmark-circle"
+                  ></ion-icon>
+                </div>
+              </div>
+              <!--fim da div prato-->
+            </div>
+            <!--fimd a div selecao-->
+          </div>
+          <!--fim da div container-->
+        </div>
+      </main>
+      <footer>
+        <div class="rodape">
+          <button
+            data-test="order-btn"
+            onclick="fecharPedidoJanela(this)"
+            disabled
+          >
+            Selecione os 3 itens para fechar o pedido
+          </button>
+        </div>
+      </footer>
+    </div>
+    <div data-test="confirm-order-modal" class="confirme-pedido escondido">
+      <h4>Confirme seu pedido</h4>
+      <div class="revisao">
+        <div class="prato-pedido">
+          <div class="comida">testecomida</div>
+          <div class="valor-comida">teste preco</div>
+        </div>
+        <div class="bebida-pedida">
+          <div class="bebida-selecionada">bebida</div>
+          <div class="valor-bebida">preco</div>
+        </div>
+        <div class="sobremesa-pedida">
+          <div class="sobremesa-selecionada">sobremesa</div>
+          <div class="valor-sobremesa">preco</div>
+        </div>
+        <div class="total">
+          <div class="total-encontrado">Total</div>
+          <div class="valor-total">R$ tanto</div>
+        </div>
+      </div>
+      <div class="botoes">
+        <button data-test="confirm-order-btn" onclick="fecharPedidoDefinitivo(this)" class="certo">
+          Tudo certo, pode pedir!
+        </button>
+        <button data-test:="cancel-order-btn" onclick="cancelarPedido()" class="cancela">Cancelar</button>
+      </div>
     </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
