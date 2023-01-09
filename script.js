@@ -13,14 +13,7 @@ function selecionaPrato(botaoClicado){
     const check = document.querySelector('.selecionadoComida .escondido');
     check.classList.remove('escondido');
     
-
-    const botaoClicadoAnteriormenteB = document.querySelector('.selecionadoBebida');
-    const botaoClicadoAnteriormenteS = document.querySelector('.selecionadoSobremesa');
-    const comida = document.querySelector('.selecionadoComida');
-    if(botaoClicadoAnteriormenteS!==null && botaoClicadoAnteriormenteB!==null && comida!==null)
-    {
-        fecharPedido();
-    }
+    fecharPedido();
 }
 
 function selecionaBebida(botaoClicado){
@@ -37,14 +30,8 @@ function selecionaBebida(botaoClicado){
     const check = document.querySelector('.selecionadoBebida .escondido');
     check.classList.remove('escondido');
 
-    const botaoClicadoAnteriormenteS = document.querySelector('.selecionadoSobremesa');
-    const botaoClicadoAnteriormenteP = document.querySelector('.selecionadoComida');
-    const bebida = document.querySelector('.selecionadoBebida');
+    fecharPedido();
 
-    if(botaoClicadoAnteriormenteS!==null && bebida!==null && botaoClicadoAnteriormenteP!==null)
-    {
-        fecharPedido();
-    }
 }
 
 function selecionaSobremesa(botaoClicado){
@@ -61,13 +48,7 @@ function selecionaSobremesa(botaoClicado){
     const check = document.querySelector('.selecionadoSobremesa .escondido');
     check.classList.remove('escondido');
 
-    const botaoClicadoAnteriormenteB = document.querySelector('.selecionadoBebida');
-    const botaoClicadoAnteriormenteP = document.querySelector('.selecionadoComida');
-    const sobremesa = document.querySelector('.selecionadoSobremesa');
-    if(botaoClicadoAnteriormenteP!==null && botaoClicadoAnteriormenteB!==null && sobremesa!==null)
-    {
-        fecharPedido();
-    }
+    fecharPedido();
 }
 //função chamada quando todos os elementos forem selecionados
 function fecharPedido(){
@@ -80,18 +61,17 @@ function fecharPedido(){
         botao.disabled = false; //habilita o botão
         botao.classList.add('liberarPedido');
         botao.innerHTML= "Fechar pedido";
+        return true;
     }
 }
 //funcao a ser usada para fechar o pedido e chamar o wpp
 function fecharPedidoDefinitivo(botao){
-    const botaoClicadoAnteriormenteP = document.querySelector('.selecionadoComida');
-    const botaoClicadoAnteriormenteB = document.querySelector('.selecionadoBebida');
-    const botaoClicadoAnteriormenteS = document.querySelector('.selecionadoSobremesa');
-    if(botaoClicadoAnteriormenteP!==null && botaoClicadoAnteriormenteB!==null && botaoClicadoAnteriormenteS!==null)
+
+    if(fecharPedido()===true)
     {
-        const prato = document.querySelector('.selecionadoComida h2');
-        const bebida = document.querySelector('.selecionadoBebida h2');
-        const sobremesa = document.querySelector('.selecionadoSobremesa h2');
+        const prato = document.querySelector('.selecionadoComida h3');
+        const bebida = document.querySelector('.selecionadoBebida h3');
+        const sobremesa = document.querySelector('.selecionadoSobremesa h3');
         const valorPrato = document.querySelector('.selecionadoComida .valor');
         const valorBebida = document.querySelector('.selecionadoBebida .valor');
         const valorSobremesa = document.querySelector('.selecionadoSobremesa .valor');
