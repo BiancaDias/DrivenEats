@@ -73,7 +73,7 @@ function fecharPedidoJanela(botao){
     const corpo = document.querySelector('.principal')
     corpo.classList.add('opacidade');
 
-    nome = prompt("Como você deseja ser chamado?");
+    nome = prompt("Digite seu nome?");
     endereco = prompt("Digite seu endereço");
 
     const comida = document.querySelector('.comida')
